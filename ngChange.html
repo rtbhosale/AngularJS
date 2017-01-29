@@ -1,0 +1,66 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Learning AngularJS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap.js"></script>
+    <script src="libs/angular.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" height="20 px" src="https://docs.angularjs.org/img/angularjs-for-header-only.svg">
+	      </a>
+
+	    </div>
+	    <p class="navbar-text navbar-right">Exploring <a href="https://www.angularjs.org/" class="navbar-link">AngularJS</a></p>
+	  </div>
+	</nav>
+	<div class="container">
+		<div>
+			<h3>Playing with ng-Change</h3>
+			<p>The <span class="label label-primary">ngChange</span> directive evaluates the given expression when the user changes the input. The expression is evaluated immediately, unlike the JavaScript onchange event which only triggers at the end of a change (usually, when the user leaves the form element or presses the return key).</p>
+			<hr/>
+			<p><em>ng-Change on checkbox, Examples : Code</em></p>
+			<pre ng-non-bindable>
+&ltdiv ng-init="count = 0">
+	&ltinput id="angularjs" type="checkbox" ng-change="count = count + 1" ng-model="confirmed" />
+	&ltp>&ltb>count : {{count}}&lt/b>&lt/p>
+&lt/div>
+			</pre>
+			<p><em>Examples : Live</em></p>
+			<div ng-init="count = 0">
+				<label for="angularjs">Check/uncheck me to fire <span class="label label-primary">ngChange</span></label><br/>.
+				<input id="angularjs" type="checkbox" ng-change="count = count + 1" ng-model="confirmed" />
+				<p><b>count : {{count}}</b></p>
+			</div>
+			<p><em>ng-Change on input, Examples : Code</em></p>
+			<pre ng-non-bindable>
+&ltdiv ng-init="countText = 0">
+	&ltlabel for="FirstName">Type in somthing to fire &ltspan class="label label-primary">ngChange&lt/span>&lt/label>&ltbr/>.
+	&ltinput id="FirstName" type="text" ng-change="countText = countText + 1" ng-model="firstName" />
+	&ltp>&ltb>Firstname : {{firstName}}&lt/b>&lt/p>
+	&ltp>&ltb>count : {{countText}}&lt/b>&lt/p>
+&lt/div>
+			</pre>
+			<p><em>Examples : Live</em></p>
+			<div ng-init="countText = 0">
+				<label for="FirstName">Firstname</label>
+				<input id="FirstName" type="text" ng-change="countText = countText + 1" ng-model="firstName" />
+				<p><b>Firstname : {{firstName}}</b></p>
+				<p><b>count : {{countText}}</b></p>
+			</div>
+			<div ng-if="countText > 0">
+				<p>Work perfect right? try entring space..</p>
+				<p>Why count is not increasing? well its because input is trimmed before the comparsion, to override this behavior use <span class="label label-primary">ngTrim</span> directive and set its value to <span class="label label-danger">false</span></p>
+			</div>
+			<hr/>
+		</div>
+	</div>
+</body>
+</html>
