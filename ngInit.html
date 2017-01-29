@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Learning AngularJS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap.js"></script>
+    <script src="libs/angular.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" height="20 px" src="https://docs.angularjs.org/img/angularjs-for-header-only.svg">
+	      </a>
+
+	    </div>
+	    <p class="navbar-text navbar-right">Exploring <a href="https://www.angularjs.org/" class="navbar-link">AngularJS</a></p>
+	  </div>
+	</nav>
+	<div class="container">
+		<div>
+			<h3>Playing with ng-Init</h3>
+			<p>The <span class="label label-primary">ngInit</span> directive allows you to evaluate an expression in the current scope.</p>
+			<p><em>Examples</em></p>
+			<p>Trying to access ng-init's firstname <span class="label label-primary">{{firstname}}</span> outside the ng-init div, as you can see we can access ng-init's value anywhere in current scope, this is because This directive executes at priority level 450.</p>
+			<div ng-init="firstname='Rahul'">
+				FirstName : {{firstname}}
+			</div>
+
+			<hr/>
+		</div>
+	</div>
+</body>
+</html>
