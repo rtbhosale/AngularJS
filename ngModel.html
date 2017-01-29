@@ -51,14 +51,14 @@
 			</p>
 		</form>
 		<form name="myForm1">
-			<label>age: <input type="number" ng-model="age" ng-required="true" ng-minlength="2" /></label><br/>
+			<label>age: <input type="number" ng-model="age" ng-required="true" ng-minlength="2" ng-maxlength="3"/></label><br/>
 			<p>
 			<ul>
 			<li><code>age: {{age}}</code><br/></li>
-			<li><code ng-if="myForm1.$valid">myForm.$valid is <span class="label label-success">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is satisfied </code>
-			<code ng-if="!myForm1.$valid">myForm.$valid is <span class="label label-danger">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is not satisfied </code><br/></li>
-			<li><code ng-if="myForm1.$valid">myForm.$invalid is <span class="label label-danger">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is satisfied </code>
-			<code ng-if="!myForm1.$valid">myForm.$invalid is <span class="label label-success">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is not satisfied </code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm.$valid is <span class="label label-success">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm.$valid is <span class="label label-danger">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm.$invalid is <span class="label label-danger">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm.$invalid is <span class="label label-success">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
 			</ul>
 			</p>
 		</form>
