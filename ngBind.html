@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Learning AngularJS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap.js"></script>
+    <script src="libs/angular.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" height="20 px" src="https://docs.angularjs.org/img/angularjs-for-header-only.svg">
+	      </a>
+
+	    </div>
+	    <p class="navbar-text navbar-right">Exploring <a href="https://www.angularjs.org/" class="navbar-link">AngularJS</a></p>
+	  </div>
+	</nav>
+	<div class="container">
+		<div>
+			<h3>Playing with ng-Bind</h3>
+			<p>The <span class="label label-primary">ngBind</span> attribute tells AngularJS to replace the text content of the specified HTML element with the value of a given expression, and to update the text content when the value of that expression changes.</p>
+			<p><em>Examples</em></p>
+			<b>ng-bind on input</b>
+			<p>FirstName: <input type="text" ng-model="firstname"/></p>
+			<p><span ng-bind="firstname"></span></p>
+			<hr/>
+			<b>ng-bind on select</b>
+			
+			<p>Gender: <select ng-model="gender">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select></p>
+			<p>Gender: <span ng-bind="gender"></span></p>
+			<hr/>
+
+			<b>ng-bind on expression</b>
+			<p><span ng-bind="1 + 2"></span></p>
+			<ul>
+				<li><code>Evaluates "1 + 2"</code></li>
+			</ul>
+			<p><span ng-bind="'Rahul' + ' ' + 'Bhosale'"></span></p>
+			<ul>
+				<li><code>Evaluates "'Rahul' + ' ' + 'Bhosale'"</code></li>
+			</ul>
+			<p><span ng-bind="1 + ' ' + 'One' "></span></p>
+			<ul>
+				<li><code>Evaluates "1 + ' ' + 'One' "</code></li>
+			</ul>
+			<hr/>
+		</div>
+	</div>
+</body>
+</html>

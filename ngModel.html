@@ -25,11 +25,11 @@
 		<h3>Playing with ng-Model</h3>
 		<p>The <i>ngModel</i> directive binds an input,select, textarea (or custom form control) to a property on the scope using NgModelController, which is created and exposed by this directive.</p>
 		<p><em>Examples</em></p>
-		<b>ng-bind on input</b>
+		<b>ng-model on input</b>
 		<p>FirstName: <input type="text" ng-model="firstname"/></p>
 		<p><span>Firstname: {{firstname}}</span></p>
 		<hr/>
-		<b>ng-bind on select</b>
+		<b>ng-model on select</b>
 		
 		<p>Gender: <select ng-model="gender">
 			<option value="Male">Male</option>
@@ -66,7 +66,7 @@
 		</form>
 		<i>ng-pattern</i> <small>Valid pattern [0-9]{2}[a-zA-Z]{3}, ex: 22BCS </small>
 		<form name="myForm2">
-			<label>age: <input type="text" ng-model="pattern" ng-pattern="/^[0-9]{2}[a-zA-Z]{3}$/"/></label><br/>
+			<label>Pattern: <input type="text" ng-model="pattern" ng-pattern="/^[0-9]{2}[a-zA-Z]{3}$/"/></label><br/>
 			<p>
 			<ul>
 			<li><code>age: {{age}}</code><br/></li>
