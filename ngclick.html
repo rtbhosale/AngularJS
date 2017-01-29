@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Learning AngularJS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap.js"></script>
+    <script src="libs/angular.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" height="20 px" src="https://docs.angularjs.org/img/angularjs-for-header-only.svg">
+	      </a>
+
+	    </div>
+	    <p class="navbar-text navbar-right">Exploring <a href="https://www.angularjs.org/" class="navbar-link">AngularJS</a></p>
+	  </div>
+	</nav>
+	<div class="container">
+		<div>
+			<h3>Playing with ng-Click</h3>
+			<p>The <span class="label label-primary">ngClick</span> directive allows you to specify custom behavior when an element is clicked.</p>
+			<p><em>Examples : Code</em></p>
+			<pre ng-non-bindable>
+&ltdiv ng-init="count = 0">
+	&ltbutton type="button" ng-click="count = count + 1">Increase count +&lt/button>
+	&ltbutton type="button" ng-click="count = count - 1">Decrease count -&lt/button>
+	&ltbutton type="button" ng-click="count = 0">Reset to zeor&lt/button>
+	&ltp>&ltb>count : {{count}}&lt/b>&lt/p>
+&lt/div>
+			</pre>
+			<p><em>Examples : Live</em></p>
+			<div ng-init="count = 0">
+				<button type="button" ng-click="count = count + 1">Increase count +</button>
+				<button type="button" ng-click="count = count - 1">Decrease count -</button>
+				<button type="button" ng-click="count = 0">Reset to zeor</button>
+				<p><b>count : {{count}}</b></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
