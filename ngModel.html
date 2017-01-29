@@ -38,6 +38,7 @@
 		<p><span>Gender : {{gender}}</span></p>
 		<hr/>
 		<b>Providing validation behavior</b>
+		<i>required</i>
 		<form name="myForm">
 			<label>firstname: <input type="text" ng-model="fname" required /></label><br/>
 			<p>
@@ -50,15 +51,29 @@
 			</ul>
 			</p>
 		</form>
+		<i>ng-minlength / ng-maxlength</i>
 		<form name="myForm1">
 			<label>age: <input type="number" ng-model="age" ng-required="true" ng-minlength="2" ng-maxlength="3"/></label><br/>
 			<p>
 			<ul>
 			<li><code>age: {{age}}</code><br/></li>
-			<li><code ng-if="myForm1.$valid">myForm.$valid is <span class="label label-success">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
-			<code ng-if="!myForm1.$valid">myForm.$valid is <span class="label label-danger">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
-			<li><code ng-if="myForm1.$valid">myForm.$invalid is <span class="label label-danger">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
-			<code ng-if="!myForm1.$valid">myForm.$invalid is <span class="label label-success">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm1.$valid is <span class="label label-success">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm1.$valid is <span class="label label-danger">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm1.$invalid is <span class="label label-danger">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm1.$invalid is <span class="label label-success">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span>/<span class="label label-primary">ng-maxlength</span> are not satisfied </code><br/></li>
+			</ul>
+			</p>
+		</form>
+		<i>ng-pattern</i> <small>Valid pattern [0-9]{2}[a-zA-Z]{3}, ex: 22BCS </small>
+		<form name="myForm2">
+			<label>age: <input type="text" ng-model="pattern" ng-pattern="/^[0-9]{2}[a-zA-Z]{3}$/"/></label><br/>
+			<p>
+			<ul>
+			<li><code>age: {{age}}</code><br/></li>
+			<li><code ng-if="myForm2.$valid">myForm2.$valid is <span class="label label-success">{{myForm2.$valid}}</span> because age is "required" and <span class="label label-primary">ng-ng-pattern</span>is satisfied </code>
+			<code ng-if="!myForm2.$valid">myForm2.$valid is <span class="label label-danger">{{myForm2.$valid}}</span> because age is "required" and <span class="label label-primary">ng-ng-pattern</span>is not satisfied </code><br/></li>
+			<li><code ng-if="myForm2.$valid">myForm2.$invalid is <span class="label label-danger">{{myForm2.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-ng-pattern</span>is satisfied </code>
+			<code ng-if="!myForm2.$valid">myForm2.$invalid is <span class="label label-success">{{myForm2.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-ng-pattern</span>is not satisfied </code><br/></li>
 			</ul>
 			</p>
 		</form>
