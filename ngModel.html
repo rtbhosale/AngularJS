@@ -39,14 +39,26 @@
 		<hr/>
 		<b>Providing validation behavior</b>
 		<form name="myForm">
-			<label>firstname: <input type="text" ng-model="fname" required /></label>
+			<label>firstname: <input type="text" ng-model="fname" required /></label><br/>
 			<p>
 			<ul>
 			<li><code>firstname: {{fname}}</code><br/></li>
-			<li><code ng-if="myForm.$valid">myForm.$valid is <span class="label label-success">{{myForm.$valid}}</span> because firstname is "required" but its empty </code>
+			<li><code ng-if="myForm.$valid">myForm.$valid is <span class="label label-success">{{myForm.$valid}}</span> because firstname is "required" and it is not empty </code>
 			<code ng-if="!myForm.$valid">myForm.$valid is <span class="label label-danger">{{myForm.$valid}}</span> because firstname is "required" and it is empty </code><br/></li>
-			<li><code ng-if="myForm.$invalid">myForm.$invalid is <span class="label label-success">{{myForm.$invalid}}</span> because firstname is "required" but its empty </code>
+			<li><code ng-if="myForm.$invalid">myForm.$invalid is <span class="label label-success">{{myForm.$invalid}}</span> because firstname is "required" but it is empty </code>
 			<code ng-if="!myForm.$invalid">myForm.$invalid is <span class="label label-danger">{{myForm.$invalid}}</span> because firstname is "required" and it is not empty </code><br/></li>
+			</ul>
+			</p>
+		</form>
+		<form name="myForm1">
+			<label>age: <input type="number" ng-model="age" ng-required="true" ng-minlength="2" /></label><br/>
+			<p>
+			<ul>
+			<li><code>age: {{age}}</code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm.$valid is <span class="label label-success">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm.$valid is <span class="label label-danger">{{myForm1.$valid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is not satisfied </code><br/></li>
+			<li><code ng-if="myForm1.$valid">myForm.$invalid is <span class="label label-danger">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is satisfied </code>
+			<code ng-if="!myForm1.$valid">myForm.$invalid is <span class="label label-success">{{myForm1.$invalid}}</span> because age is "required" and <span class="label label-primary">ng-minlength</span> is not satisfied </code><br/></li>
 			</ul>
 			</p>
 		</form>
