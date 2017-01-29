@@ -51,7 +51,7 @@
 |ngBindHtml|
 |ngBindTemplate|
 |ngBlur|
-|ngChange|
+|ngChange| Yes
 |ngChecked|
 |ngClass|
 |ngClassEven|
