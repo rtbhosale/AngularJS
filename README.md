@@ -63,21 +63,21 @@
 |ngCsp|
 |ngCut|
 |ngDblclick|
-|ngDisabled|
+|ngDisabled| Yes
 |ngFocus|
 |ngForm|
 |ngHide|
 |ngHref|
 |ngIf|
 |ngInclude|
-|ngInit|
+|ngInit| Yes
 |ngJq|
 |ngKeydown|
 |ngKeypress|
 |ngKeyup|
 |ngList|
-|ngMaxlength|
-|ngMinlength|
+|ngMaxlength| Yes
+|ngMinlength| Yes
 |ngModel| Yes
 |ngModelOptions|
 |ngMousedown|
