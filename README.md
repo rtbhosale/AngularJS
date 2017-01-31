@@ -53,7 +53,7 @@
 |ngBlur|
 |ngChange| Yes
 |ngChecked|
-|ngClass|
+|ngClass| Yes
 |ngClassEven|
 |ngClassOdd|
 |ngClick| Yes
