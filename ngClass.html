@@ -33,7 +33,7 @@
 			</ol>
 			<p><span class="label label-info">Note:</span> The directive won't add duplicate classes if a particular class was already set.<br/>When the expression changes, the previously added classes are removed and only then are the new classes added.</p>
 			<hr/>
-			<p><em>Examples : Passing Classnames to ngClass</em></p>
+			<p><em>Examples : Passing Classnames to ngClass as object</em></p>
 			<pre ng-non-bindable>
 &ltdiv ng-init="count = 0">
 	&ltbutton id="count" ng-click="count = count + 1">Click me to toggle class names&lt/button>
@@ -47,6 +47,25 @@
 				<button id="count" ng-click="count = count + 1">Click me to toggle class names</button>
 				<p>
 					<span  ng-class="{'label label-danger': count % 2 == 0, 'label label-primary': count % 2 !== 0}">count : {{count}}</span>
+				</p>
+			</div>
+			<hr/>
+			<p><em>Examples : Passing Classnames to ngClass as string</em></p>
+			<pre ng-non-bindable>
+&ltdiv ng-init="count1 = 0">
+	&ltbutton id="count1" ng-click="count1 = count1 + 1">Click me to toggle class names&lt/button>
+	&ltp>
+		&ltspan ng-if="count1 % 2 == 0" ng-class="'label label-danger'">count : {{count1}}&lt/span>
+		&ltspan ng-if="count1 % 2 !== 0" ng-class="'label label-primary'">count : {{count1}}&lt/span>
+	&lt/p>
+&lt/div>
+			</pre>
+
+			<div ng-init="count1 = 0">
+				<button id="count1" ng-click="count1 = count1 + 1">Click me to toggle class names</button>
+				<p>
+					<span ng-if="count1 % 2 == 0" ng-class="'label label-danger'">count : {{count1}}</span>
+					<span ng-if="count1 % 2 !== 0" ng-class="'label label-primary'">count : {{count1}}</span>
 				</p>
 			</div>
 			<hr/>
